@@ -103,7 +103,7 @@ Alert.show = function (detailString, enterCallBack, needCancel, animSpeed) {
 
     // 弹出动画完成回调
     self.onFadeOutFinish = function () {
-        self.onDestory();
+        self.onDestroy();
     };
 
     // 按钮点击事件
@@ -117,7 +117,7 @@ Alert.show = function (detailString, enterCallBack, needCancel, animSpeed) {
     };
 
     // 销毁 alert (内存管理还没搞懂，暂且这样写吧~v~)
-    self.onDestory = function () {
+    self.onDestroy = function () {
         Alert._alert.destroy();
         Alert._enterCallBack = null;
         Alert._alert = null;
